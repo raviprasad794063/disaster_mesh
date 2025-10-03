@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    
+    <!-- Card and Component Dimensions -->
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="chip_corner_radius">16dp</dimen>
+    
+    <!-- Elevation -->
+    <dimen name="elevation_card">4dp</dimen>
+    <dimen name="elevation_fab">8dp</dimen>
+    <dimen name="elevation_dialog">8dp</dimen>
+    
+    <!-- Text Sizes -->
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="text_size_headline">20sp</dimen>
+    
+    <!-- Component Heights -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_mini_size">40dp</dimen>
+    
+    <!-- Map and Layout -->
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="bottom_sheet_peek_height">120dp</dimen>
+</resources>

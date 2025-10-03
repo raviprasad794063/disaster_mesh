@@ -1,0 +1,27 @@
+# Signing configuration for release builds
+# Copy this file to signing.properties and fill in your actual values
+# DO NOT commit signing.properties to version control
+
+# Path to your keystore file
+STORE_FILE=path/to/your/keystore.jks
+
+# Keystore password
+STORE_PASSWORD=your_keystore_password
+
+# Key alias
+KEY_ALIAS=your_key_alias
+
+# Key password
+KEY_PASSWORD=your_key_password
+
+# Example usage in build.gradle:
+# signingConfigs {
+#     release {
+#         def props = new Properties()
+#         props.load(new FileInputStream(file("signing.properties")))
+#         storeFile file(props['STORE_FILE'])
+#         storePassword props['STORE_PASSWORD']
+#         keyAlias props['KEY_ALIAS']
+#         keyPassword props['KEY_PASSWORD']
+#     }
+# }

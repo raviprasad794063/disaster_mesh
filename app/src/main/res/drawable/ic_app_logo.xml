@@ -1,0 +1,49 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background Circle -->
+    <path
+        android:fillColor="@color/md_theme_light_primary"
+        android:pathData="M54,54m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"/>
+    
+    <!-- Mesh Network Pattern -->
+    <group android:translateX="54" android:translateY="54">
+        <!-- Central Node (using path for circle) -->
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M0,0m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
+        
+        <!-- Surrounding Nodes (using path for circles) -->
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M-20,-20m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M20,-20m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M-20,20m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M20,20m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+        
+        <!-- Connection Lines -->
+        <path
+            android:strokeColor="@android:color/white"
+            android:strokeWidth="2"
+            android:pathData="M-20,-20 L0,0 L20,-20 M-20,20 L0,0 L20,20 M-20,-20 L-20,20 M20,-20 L20,20"/>
+        
+        <!-- Emergency Symbol (Shield) -->
+        <path
+            android:fillColor="@color/md_theme_light_secondary"
+            android:pathData="M0,-15 L-8,-10 L-8,5 C-8,10 -4,12 0,15 C4,12 8,10 8,5 L8,-10 Z"/>
+        
+        <!-- Alert Symbol -->
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M0,-8 L-2,2 L2,2 Z M0,4 L0,6"/>
+    </group>
+</vector>

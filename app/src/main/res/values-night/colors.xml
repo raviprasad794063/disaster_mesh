@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme specific color overrides -->
+    
+    <!-- Risk Level Colors (adjusted for dark theme) -->
+    <color name="risk_low">#66BB6A</color>
+    <color name="risk_low_container">#1B5E20</color>
+    <color name="risk_medium">#FFB74D</color>
+    <color name="risk_medium_container">#E65100</color>
+    <color name="risk_high">#FF8A65</color>
+    <color name="risk_high_container">#BF360C</color>
+    <color name="risk_critical">#EF5350</color>
+    <color name="risk_critical_container">#B71C1C</color>
+    
+    <!-- Status Colors (adjusted for dark theme) -->
+    <color name="mesh_connected">#66BB6A</color>
+    <color name="mesh_connecting">#FFB74D</color>
+    <color name="mesh_disconnected">#BDBDBD</color>
+    <color name="mesh_error">#EF5350</color>
+    
+    <!-- Authority Colors (adjusted for dark theme) -->
+    <color name="authority_admin">#66BB6A</color>
+    <color name="authority_user">#90CAF9</color>
+</resources>

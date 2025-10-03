@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Map View -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Status Card at Top -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/statusCard"
+        style="@style/Widget.DisasterMesh.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Role and Mesh Status Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Role Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/roleChip"
+                    style="@style/Widget.DisasterMesh.Chip.Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/role_user"
+                    app:chipBackgroundColor="@color/authority_user"
+                    app:chipIcon="@drawable/ic_person_24"
+                    app:chipIconTint="@android:color/white"
+                    app:chipStrokeWidth="0dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <!-- Mesh Status Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/meshStatusChip"
+                    style="@style/Widget.DisasterMesh.Chip.Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mesh_status_starting"
+                    app:chipBackgroundColor="@color/mesh_connecting"
+                    app:chipIcon="@drawable/ic_wifi_24"
+                    app:chipIconTint="@android:color/white"
+                    app:chipStrokeWidth="0dp" />
+
+            </LinearLayout>
+
+            <!-- Switch Role Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/switchRoleBtn"
+                style="@style/Widget.DisasterMesh.Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:text="@string/switch_to_admin"
+                app:icon="@drawable/ic_swap_24" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Alert Information Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/alertCard"
+        style="@style/Widget.DisasterMesh.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="88dp"
+        android:visibility="gone"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/last_alert_header"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/riskLevelChip"
+                    style="@style/Widget.DisasterMesh.Chip.Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/risk_critical"
+                    app:chipBackgroundColor="@color/risk_critical" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/alertDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dismissAlertBtn"
+                style="@style/Widget.DisasterMesh.Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:text="Dismiss"
+                app:icon="@drawable/ic_close_24" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:alpha="0.6"
+            android:src="@drawable/ic_shield_24"
+            app:tint="?attr/colorPrimary" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/no_alerts_message"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+    </LinearLayout>
+
+    <!-- Floating Action Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <!-- Location Refresh FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/locationFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/center_on_location"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_location_24"
+            app:tint="?attr/colorOnSecondaryContainer" />
+
+        <!-- View Logs FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/viewLogsFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/view_logs"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_list_24"
+            app:tint="?attr/colorOnSecondaryContainer" />
+
+        <!-- Main Action FAB -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/mainActionFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_sos"
+            app:backgroundTint="@color/md_theme_light_error"
+            app:icon="@drawable/ic_emergency_24"
+            app:iconTint="?attr/colorOnError" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

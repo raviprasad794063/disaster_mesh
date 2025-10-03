@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DisasterMesh</string>
+    <!-- Replace with your real key in local env or secrets -->
+    <string name="google_maps_key">YOUR_GOOGLE_MAPS_API_KEY_HERE</string>
+
+    <!-- Notifications -->
+    <string name="channel_alerts_name">Disaster Alerts</string>
+    <string name="channel_alerts_desc">Critical emergency notifications</string>
+    <string name="notification_title">🚨 Emergency Alert</string>
+    <string name="notification_action_open_map">View Location</string>
+    
+    <!-- Main Screen -->
+    <string name="last_alert_header">Recent Alert</string>
+    <string name="no_alerts_message">No recent alerts\nMesh network is monitoring for emergencies</string>
+    
+    <!-- Mesh Status -->
+    <string name="mesh_status_connected">Connected • %d devices</string>
+    <string name="mesh_status_discovering">Searching for devices…</string>
+    <string name="mesh_status_broadcasting">Broadcasting • Visible to nearby</string>
+    <string name="mesh_status_offline">Offline • Check permissions</string>
+    <string name="mesh_status_starting">Starting mesh network…</string>
+    
+    <!-- Authority & Roles -->
+    <string name="role_admin">Admin</string>
+    <string name="role_user">User</string>
+    <string name="switch_to_admin">Switch to Admin</string>
+    <string name="switch_to_user">Switch to User</string>
+    <string name="admin_password_prompt">Enter admin password</string>
+    <string name="admin_password_hint">Admin password</string>
+    <string name="invalid_password">Invalid password</string>
+    <string name="role_switched_admin">Switched to Admin mode</string>
+    <string name="role_switched_user">Switched to User mode</string>
+    
+    <!-- Buttons -->
+    <string name="broadcast_alert">Broadcast Alert</string>
+    <string name="send_sos">Send SOS</string>
+    <string name="view_logs">Activity Log</string>
+    <string name="use_current_location">Use Current Location</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+    
+    <!-- Alert Dialog -->
+    <string name="broadcast_alert_title">Broadcast Emergency Alert</string>
+    <string name="sos_alert_title">Send SOS Signal</string>
+    <string name="latitude_hint">Latitude</string>
+    <string name="longitude_hint">Longitude</string>
+    <string name="radius_hint">Affected radius (meters)</string>
+    <string name="risk_level_hint">Risk level (low, medium, high, critical)</string>
+    <string name="message_hint">Additional details (optional)</string>
+    <string name="location_updated">Location updated</string>
+    <string name="location_unavailable">Location not available</string>
+    <string name="location_permission_required">Location permission required</string>
+    <string name="invalid_values">Please check your input values</string>
+    
+    <!-- Risk Levels -->
+    <string name="risk_low">Low Risk</string>
+    <string name="risk_medium">Medium Risk</string>
+    <string name="risk_high">High Risk</string>
+    <string name="risk_critical">Critical</string>
+    
+    <!-- Permissions -->
+    <string name="permissions_required_title">Permissions Required</string>
+    <string name="permissions_required_message">DisasterMesh needs location and Bluetooth permissions to create the emergency mesh network</string>
+    <string name="grant_permissions">Grant Permissions</string>
+    <string name="mesh_limited_features">Mesh network active (limited features)</string>
+    
+    <!-- Logs -->
+    <string name="logs_title">Network Activity</string>
+    <string name="no_logs_message">No activity logs yet</string>
+    
+    <!-- Error Messages -->
+    <string name="mesh_start_failed">Failed to start mesh network: %s</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="alert_send_failed">Failed to send alert</string>
+    
+    <!-- Location Messages -->
+    <string name="location_centered">Map centered on your location</string>
+    <string name="location_default_message">Using default location. Enable location services for better experience.</string>
+    <string name="location_enable">Enable</string>
+    <string name="center_on_location">Center on my location</string>
+</resources>
+
+
