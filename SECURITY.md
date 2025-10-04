@@ -17,7 +17,7 @@ We actively support the following versions of DisasterMesh with security updates
 
 **For non-critical vulnerabilities:**
 - Create a private security advisory on GitHub
-- Email: security@disastermesh.org (if available)
+- Email: rrk794063@gmail.com
 - Include detailed steps to reproduce
 - Provide impact assessment
 
@@ -145,9 +145,7 @@ Before submitting code:
 
 In case of active security incidents affecting emergency operations:
 
-1. **Immediate Response Team**: [Contact information]
-2. **Emergency Coordinators**: [Contact information]
-3. **Technical Security Team**: [Contact information]
+1. **Immediate Response Team**: [rrk794063@gmail.com]
 
 ## 📚 Security Resources
 
