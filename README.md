@@ -94,8 +94,9 @@ signingConfigs {
 ```
 
 #### **Admin Access**
-Default admin password: `admin123` (change in production)
-Location: `MapsFragment.kt` line ~400
+Default admin password: `DisasterMesh2024!Emergency` (MUST be changed in production)
+⚠️ **SECURITY WARNING**: Change admin authentication before public deployment
+Location: `MapsFragment.kt` - `verifyAdminPassword()` method
 
 ## 📋 **Permissions Required**
 
@@ -120,7 +121,7 @@ Location: `MapsFragment.kt` line ~400
 
 ### **For Emergency Authorities**
 1. **Switch to Admin mode** using the role switch button
-2. **Enter admin password** (default: `admin123`)
+2. **Enter admin password** (default: `DisasterMesh2024!Emergency`)
 3. **Broadcast emergency alerts** with risk levels
 4. **Monitor network activity** through activity logs
 5. **Coordinate response efforts** using location data

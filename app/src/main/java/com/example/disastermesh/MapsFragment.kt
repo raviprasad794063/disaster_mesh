@@ -643,6 +643,21 @@ class MapsFragment : Fragment() {
         getCurrentLocationForMap()
     }
 
+    // Secure admin password verification
+    private fun verifyAdminPassword(enteredPassword: String): Boolean {
+        // TODO: Replace with secure authentication method
+        // For now, using a more complex password - CHANGE THIS IN PRODUCTION!
+        val adminPassword = "DisasterMesh2024!Emergency"
+        
+        // In production, use:
+        // 1. Hashed passwords with bcrypt
+        // 2. Android Keystore for secure storage
+        // 3. Time-based codes for emergency access
+        // 4. Certificate-based authentication
+        
+        return enteredPassword == adminPassword
+    }
+
     // Debug method to check location services status
     private fun debugLocationServices() {
         android.util.Log.d("DisasterMesh", "=== LOCATION DEBUG INFO ===")
@@ -748,7 +763,7 @@ class MapsFragment : Fragment() {
             .setView(inputLayout)
             .setPositiveButton("Login") { _, _ ->
                 val enteredPassword = passwordInput.text.toString()
-                if (enteredPassword == "admin123") {
+                if (verifyAdminPassword(enteredPassword)) {
                     authorityManager.setAuthority(Authority.ADMIN)
                     updateRoleDisplay()
                     Snackbar.make(binding.root, getString(R.string.role_switched_admin), Snackbar.LENGTH_SHORT).show()
